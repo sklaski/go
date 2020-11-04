@@ -8,6 +8,9 @@ import (
 func alphanumeric(str string) bool {
 	valid := regexp.MustCompile(`^[a-zA-Z0-9]+$`)
 	return valid.MatchString(str)
+
+	//regEx split
+	//	split := regexp.MustCompile("\\s+").Split(scanner.Text(), -1)
 }
 
 func main() {
