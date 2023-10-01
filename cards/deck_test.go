@@ -27,7 +27,7 @@ func TestSaveToDeckAndNewDeckFromFile(t *testing.T) {
 	os.Remove("_decktesting")
 
 	deck := newDeck()
-	deck.saveToFile("_decktesting")
+	_ = deck.saveToFile("_decktesting")
 
 	loadedDeck := newDeckFromFile("_decktesting")
 

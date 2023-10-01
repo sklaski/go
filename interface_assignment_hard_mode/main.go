@@ -16,5 +16,5 @@ func main() {
 		log.Fatal(err)
 	}
 
-	io.Copy(os.Stdout, file)
+	_, _ = io.Copy(os.Stdout, file)
 }

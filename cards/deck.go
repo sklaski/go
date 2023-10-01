@@ -2,14 +2,13 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"math/rand"
 	"os"
 	"strings"
 	"time"
 )
 
-// Create a new type of 'deck'
+// Create a new type of 'deck',
 // which is a slice of strings
 type deck []string
 
@@ -32,7 +31,7 @@ func (d deck) print() {
 	}
 }
 
-func deal(d deck, handSize int) (deck, deck) {
+func _(d deck, handSize int) (deck, deck) {
 	return d[:handSize], d[handSize:]
 }
 
@@ -41,11 +40,11 @@ func (d deck) toString() string {
 }
 
 func (d deck) saveToFile(filename string) error {
-	return ioutil.WriteFile(filename, []byte(d.toString()), 0666)
+	return os.WriteFile(filename, []byte(d.toString()), 0666)
 }
 
 func newDeckFromFile(filename string) deck {
-	bs, err := ioutil.ReadFile(filename)
+	bs, err := os.ReadFile(filename)
 	if err != nil {
 		// Option #1 - log the error and return a call to newDeck()
 		// Option #2 - Log the error and entirely quit the program

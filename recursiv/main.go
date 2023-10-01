@@ -19,8 +19,7 @@ func main() {
 }
 
 func Decompose(n int64) []int64 {
-	var sliceInt []int64
-	sliceInt = decomposer(n, n*n)
+	sliceInt := decomposer(n, n*n)
 	// keine Lösung
 	if sliceInt == nil {
 		return nil
@@ -41,7 +40,7 @@ func decomposer(n int64, remain int64) []int64 {
 		if (remain - i*i) >= 0 {
 			//Wenn noch Rest, dann weiter
 			r := decomposer(i, remain-i*i)
-			// Wenn ich erfolgreich zurück komme "aktuelles" n als richtig merken
+			// Wenn ich erfolgreich zurückkomme "aktuelles" n als richtig merken
 			if r != nil {
 				r = append(r, n)
 				return r

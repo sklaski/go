@@ -76,12 +76,12 @@ func DecomposeTreeWithStructureValue(n int64) []int64 {
 	add(n, 0)
 	maxA := math.Pow(float64(n), 2)
 	fmt.Println("Result:", calculate(n, float64(int64(maxA))))
-	//showNode(root, "")
+	showNode(root, "")
 	return []int64{}
 }
 
 func main() {
-	toTest := []int64{50}
+	toTest := []int64{5}
 	for _, arr := range toTest {
 		fmt.Println("org:", arr, "enc:", DecomposeTreeWithStructureValue(arr))
 	}

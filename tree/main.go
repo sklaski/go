@@ -90,4 +90,5 @@ func main() {
 	for _, arr := range toTest {
 		fmt.Println("org:", arr, "enc:", Decompose(arr))
 	}
+	showNode(root, "")
 }
